@@ -2,7 +2,7 @@
 
 This is my Level 3 NCEA project for digital technologies
 
-<img src="images/0I0A3820-min.jpg" width="50%" height="auto"/>
+<img src="images/0I0A3820-min.jpg" width="45%" height="auto"/>
 
 It is a database-driven web app that allows users to:
 
