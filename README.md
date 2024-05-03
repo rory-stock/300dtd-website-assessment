@@ -1,8 +1,10 @@
+<link href="md-style.css" rel="stylesheet"></link>
+
 # Photography portfolio Website
 
 This is my Level 3 NCEA project for digital technologies
 
-![Photo of mountain biker](images/0I0A3820-min.jpg)
+![Mountainbiker](images/0I0A3820-min.jpg)
 
 It is a database-driven web app that allows users to:
 
