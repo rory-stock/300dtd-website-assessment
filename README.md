@@ -13,11 +13,15 @@ Assessment Standards: **91902** and **91903**
 
 ### Identified Need or Problem
 
-Replace this text with a clearly stated problem or need that exists that your project will attempt to solve / fulfil.
+Need a simple way to share and display my portfolio and photos from events. At the moment my event photos can only be viewed through google drive which is quite slow and not the most user friendly. 
 
 ### End-User Requirements
 
-Replace this text with a description of your typical end-users and their specific needs / expectations / requirements.
+Owner of site: Needs to be able to easily add/update images in portfolio and somewhat automate adding event images.
+
+Viewers of site: Members of the public. Need to be able to easily access and download images. Site needs to be fast and responsive so that it is more useful than google drive.
+
+Possible Clients: Need to be able to easily see examples of my work and an easy way to contact me. 
 
 ### Proposed Solution
 
