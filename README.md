@@ -25,7 +25,11 @@ Possible Clients: Need to be able to easily see examples of my work and an easy 
 
 ### Proposed Solution
 
-Replace this text with a brief statement about the system that you intend to create, including the key functionality it should have.
+A website that allows users to easily access view and download my photos
+
+Admin/Owner will be able ot easily add images to the website and add new events/projects from within the website
+
+Users should be able to search for any images that have their raceplate in(raceplate in metadata)
 
 
 -------------------------------------------------
