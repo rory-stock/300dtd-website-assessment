@@ -27,10 +27,10 @@ Possible Clients: Need to be able to easily see examples of my work and an easy 
 
 A website that allows users to easily access view and download my photos
 
-Admin/Owner will be able ot easily add images to the website and add new events/projects from within the website
+Users should be able to search for any images that have their race plate in (race plate in metadata - metadata added while editing photos, searchable through website)
 
-Users should be able to search for any images that have their raceplate in(raceplate in metadata)
-
+Admin/Owner will be able to easily add images to the website and add new events/projects from within the website
+ - This would require an admin account with special permissions so that they can modify the site
 
 -------------------------------------------------
 
