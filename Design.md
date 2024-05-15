@@ -88,6 +88,14 @@ The product should be useful for the owner in that it provides a simple way to d
 
 I will need to make sure that it fulfils the needs of both the owner and the user by making sure that the website is easy and more efficient than just using a cloud service.
 
+### Findable
+
+The website should be easy to navigate so the users can find what they are looking for.
+
+Users may not have the best IT skills so the website should be easy to understand with each button or link clearly labelled.
+
+Buttons such as expand image and download should be easy to find and use. The menu should be easy to navigate and the search function should be easy to use.
+
 ### UX PRINCIPLE NAME HERE
 
 Replace this text with a clear explanation of what the UX design principle means.
@@ -95,15 +103,6 @@ Replace this text with a clear explanation of what the UX design principle means
 Replace this text with an explanation of why the principle is relevant to this particular project.
 
 Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
-
-### UX PRINCIPLE NAME HERE
-
-Replace this text with a clear explanation of what the UX design principle means.
-
-Replace this text with an explanation of why the principle is relevant to this particular project.
-
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
-
 
 -------------------------------------------------
 
@@ -116,7 +115,6 @@ Place a image here that shows the *final design* of your database: tables, field
 ### User Interface Design
 
 Place images here that show your *final design* of your UI: layout, colours, etc.
-
 
 -------------------------------------------------
 
@@ -166,3 +164,5 @@ Replace this text with brief notes showing how the UX principle was addressed in
 ### Review of UX PRINCIPLE NAME HERE
 
 Replace this text with brief notes showing how the UX principle was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+
+-------------------------------------------------
