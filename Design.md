@@ -96,13 +96,13 @@ Users may not have the best IT skills so the website should be easy to understan
 
 Buttons such as expand image and download should be easy to find and use. The menu should be easy to navigate and the search function should be easy to use.
 
-### UX PRINCIPLE NAME HERE
+### Usable
 
-Replace this text with a clear explanation of what the UX design principle means.
+Easy to use for end users.
 
-Replace this text with an explanation of why the principle is relevant to this particular project.
+The website should be easy to use for both the owner and the user. The owner should be able to easily add images to the website and the user should be able to easily find and download images.
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+If it is not easy to use then users will be less likely to effectively engage with the website and its content.
 
 -------------------------------------------------
 
