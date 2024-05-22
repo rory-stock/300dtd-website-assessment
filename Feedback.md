@@ -15,7 +15,7 @@
 
 > Notes:
 > - Solution / functionality - Make this a through, bulleted list of all features that users / admin would have access to - see the exemplar
-> - Implications - Should reallu include Usability, referencing Nielsen, etc.
+> - Implications - Should really include Usability, referencing Nielsen, etc.
 > - UX - ok, but nothing more?
 
 
