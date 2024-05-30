@@ -18,15 +18,15 @@ Assessment Standards: **91902** and **91903**
 
 ## Design, Development and Testing Log
 
-### DATE HERE
+### Friday 31st May
 
-Replace this test with what you are working on
+Working on site flow using excalidraw
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Started designing how the user will navigate between pages, and making sure that there are no dead ends in the site. 
 
 > Replace this text with any user feedback / comments
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+![Excalidraw screenshot](images/image.png)
 
 ### DATE HERE
 
