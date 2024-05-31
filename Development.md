@@ -54,11 +54,19 @@ Started designing the database for the website. I may need to add more tables to
 
 Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
 
-### DATE HERE
+### Friday 31st May
 
-Replace this test with what you are working on
+Site Design with Figma
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Made a draft design of the mobile and desktop versions of the site. It follows the same flow that I made in excalidraw.
+
+Mobile Site:
+![Figma Mobile site screenshot](images/image3.png)
+
+Desktop Site:
+![Figma Desktop site screenshot](images/image4.png)
+
+It is not shown in the screenshots but on the figma preview each page is interactive and you can click through the site.
 
 > Replace this text with any user feedback / comments
 
