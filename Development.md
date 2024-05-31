@@ -34,7 +34,8 @@ Replace this text with notes describing how you acted upon the user feedback: ma
 
 Working on site flow using excalidraw
 
-Started designing how the user will navigate between pages, and making sure that there are no dead ends in the site. 
+Started designing how the user will navigate between pages, and making sure that there are no dead ends in the site. <br>
+This is only the user interface, I still need to make an admin interface to allow for uploading and managing the site.
 
 ![Excalidraw screenshot](images/image.png)
 
@@ -58,7 +59,8 @@ Replace this text with notes describing how you acted upon the user feedback: ma
 
 Site Design with Figma
 
-Made a draft design of the mobile and desktop versions of the site. It follows the same flow that I made in excalidraw.
+Made a draft design of the mobile and desktop versions of the site. It follows the same flow that I made in excalidraw. <br>
+This is only the user interface, I still need to make an admin interface to allow for uploading and managing the site.
 
 Mobile Site:
 ![Figma Mobile site screenshot](images/image3.png)
