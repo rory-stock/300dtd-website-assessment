@@ -26,34 +26,28 @@ I spent quite a lot of time trying to use the google drive api to allow site use
 
 ![Code snippet screenshot](<images/Screenshot 2024-05-30.png>)
 
-> Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+> No user feedback relevant for this.
 
 ### Friday 31st May
 
-Working on site flow using excalidraw
+Working on site flow using excalidraw.
 
 Started designing how the user will navigate between pages, and making sure that there are no dead ends in the site. <br>
 This is only the user interface, I still need to make an admin interface to allow for uploading and managing the site.
 
 ![Excalidraw screenshot](images/image.png)
 
-> Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+> Users happy with site flow at the moment, as the site progresses this may get modified slightly, but the site does not demand a particularly complex layout. I will however get user more user feedback for when I design the admin interface.
 
 ### Friday 31st May
 
 Database design with DrawSQL
 
-Started designing the database for the website. I may need to add more tables to the Image EXIF data table as I am not sure how many filters I will want.
+Started designing the database for the website. I may need to add more tables to the Image EXIF data table as I am not sure how many filters I will want. Admin accounts/security still need to be added.
 
 ![Draw SQL screenshot](images/image1.png)
 
-> Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+> No particularly relevant user feedback, just making sure that any relevant image IPTC/copyright data is included in the database.
 
 ### Friday 31st May
 
@@ -70,7 +64,7 @@ Desktop Site:
 
 It is not shown in the screenshots but on the figma preview each page is interactive and you can click through the site.
 
-> Replace this text with any user feedback / comments
+> Site design feedback: The home page should have one main large image then other smaller images below it with a non-symmetrical layout. They also asked about copyright. At the bottom of each page I will add a copyright notice specifying ownership of the site/images. We also discussed the background and accent colours used on the site. We went through a few different options and agreed that a simple black/white/grey them is best as it allows the main content of the site, images to stand out. We decided to use white as the background as mountain bike photos tend to have darker colours and a white background would create a good contrast.
 
 Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
 

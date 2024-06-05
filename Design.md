@@ -28,7 +28,9 @@ Owner of site: Needs to be able to easily add/update images in portfolio and som
 
 Viewers of site: Members of the public. Need to be able to easily access and download images. Site needs to be fast and responsive so that it is more useful than google drive.
 
-Possible Clients: Need to be able to easily see examples of my work and an easy way to contact me. 
+Possible Clients: Need to be able to easily see examples of my work and an easy way to contact me.
+
+End user feedback: For feedback I will ask for feedback from my parents. My dad used to be a professional ski/mountaineering/adventure photographer so should be able to provide some good/relevant feedback on the website.
 
 ### Proposed Solution
 
