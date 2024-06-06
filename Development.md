@@ -30,7 +30,7 @@ I spent quite a lot of time trying to use the google drive api to allow site use
 
 ### Friday 31st May
 
-Working on site flow using excalidraw.
+Working on site flow using Excalidraw.
 
 Started designing how the user will navigate between pages, and making sure that there are no dead ends in the site. <br>
 This is only the user interface, I still need to make an admin interface to allow for uploading and managing the site.
@@ -66,17 +66,22 @@ It is not shown in the screenshots but on the figma preview each page is interac
 
 > Site design feedback: The home page should have one main large image then other smaller images below it with a non-symmetrical layout. They also asked about copyright. At the bottom of each page I will add a copyright notice specifying ownership of the site/images. We also discussed the background and accent colours used on the site. We went through a few different options and agreed that a simple black/white/grey them is best as it allows the main content of the site, images to stand out. We decided to use white as the background as mountain bike photos tend to have darker colours and a white background would create a good contrast. We also discussed about whether or not there should be an about page, we thought that it would be a good idea to add in the future, but that there would not be enough to put in it at the moment.
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+Edited the mobile and desktop site designs to reflect the feedback. I also changed the projects page to a just an image gallery page which is more relevant at the moment. A projects page may be added in the future if there is enough content to put on it.
 
-### DATE HERE
+Updated Mobile Site:
+![Screenshot of Figma mobile design](images/image5.png)
 
-Replace this test with what you are working on
+Updated Desktop Site:
+![Screenshot of Figma desktop design](images/image6.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+### Thursday 6th June
 
-> Replace this text with any user feedback / comments
+Admin section of database with DrawSQL
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+Added an admin table to my DrawSQL database design. To ensure admin security no passwords will be stored on the database, instead the passwords will be hashed and the hash will be stored.
+![Screenshot of DrawSQL](images/image7.png)
+
+> No user feedback relevant for this.
 
 ### DATE HERE
 
