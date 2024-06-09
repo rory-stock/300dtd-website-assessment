@@ -41,15 +41,9 @@ Users should be able to search for any images that have their race plate in (rac
 Admin/Owner will be able to easily add images to the website and add new events/projects from within the website
  - This would require an admin account with special permissions so that they can modify the site
     - Some of the features that should be included in the admin panel are: 
-        - Option to select if an uploaded image can be downloaded or not, and change this at any time
         - Ability to archive old event images so that they don't take up so much space in the r2 bucket
         - Ability to add new events
-        - Ability to add new images to the website, and which section they should be in
-        - Change which section an image is in, or add it to multiple sections
-            Sections:
-                - Portfolio
-                - Events
-                - Home page
+        - Ability to add new images to the website, and which section they should be in (Home, portfolio, events)
 
 -------------------------------------------------
 

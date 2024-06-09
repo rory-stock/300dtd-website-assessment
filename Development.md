@@ -55,6 +55,7 @@ Site Design with Figma
 
 Made a draft design of the mobile and desktop versions of the site. It follows the same flow that I made in excalidraw. <br>
 This is only the user interface, I still need to make an admin interface to allow for uploading and managing the site.
+The font used in this design is [League Spartan](https://fonts.google.com/specimen/League+Spartan)
 
 Mobile Site:
 ![Figma Mobile site screenshot](images/image3.png)
@@ -83,12 +84,42 @@ Added an admin table to my DrawSQL database design. To ensure admin security no 
 
 > No user feedback relevant for this.
 
-### DATE HERE
+### Sunday 9th June
 
-Replace this test with what you are working on
+Admin page flow with Excalidraw
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Designed the flow for the admin page. This will allow the user to upload images and manage the site. The admin page will be password protected and will only be accessible to the site owner. This page will be accessed with the /admin route with no button on the main site linking to it so as to avoid non-admin users going to it. The page itself will also require the admin to sign in.
+![Screenshot of excalidraw](images/image8.png)
 
-> Replace this text with any user feedback / comments
+> Feedback lower down
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+### Sunday 9th June
+
+Further updates to Figma design. Refining the design slightly and added a search button to the events page. There are two possible designs for the home page that I will show to my end users for feedback.
+
+Updated Mobile Site: <br>
+![Figma screenshot](images/image9.png)
+
+Updated Desktop Site:
+![Figma screenshot](images/image10.png)
+
+> User feedback: The new layout with the different sized, non-symmetrical images is a great improvement. Users liked the alternate layout I designed which uses a type of parallax scrolling. Users liked the new non-symmetrical layout of the portfolio and events sections.
+
+### Sunday 9th June
+
+Finalising DB design with DrawSQL. Home page images will be stored in the public folder inside the project as these don't need to be stored on the database. 
+
+![DrawSQL screenshot](images/image11.png)
+
+This database design will address the end-users feedback about copyright by storing relevant IPTC/copyright information in the database.
+
+### Sunday 9th June
+
+Admin Page design with Figma
+
+Added the admin pages for desktop and mobile. The authentication will be handled with the laravel breeze kit which comes with a UI. There won't be an admin section for mobile as it needs access to folders containing the photos which would only really be on a desktop/laptop. This layout only covers editing events, editing the other sections shouldn't be too different though and should really only have different wording with some different sections.
+
+Desktop admin:
+![Figma screenshot](images/image12.png)
+
+> Users though the admin section was well thought out and would adequately provide a good way to update parts of the website.
