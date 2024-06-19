@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+
+        <!-- Meta Tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="Rory Stock">
+        <meta name="description" content="Photography portfolio for New Zealand based photographer Rory Stock">
+        <meta name="keywords" content="photography, mountain bike photography, action photography, portfolio, Rory Stock photography">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Rory Stock">
+        <meta name="copyright" content="Rory Stock">
 
-        <title>Laravel</title>
+        <!-- Title -->
+        <title>Rory Stock</title>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- Vite -->
         @vite('resources/css/app.css')
+        @vite('resources/js/app.js')
+
     </head>
 
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+    <body>
     </body>
 </html>
