@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Layout;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class accordion extends Component
+class _head extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class accordion extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.accordion');
+        return view('components.layout._head');
     }
 }

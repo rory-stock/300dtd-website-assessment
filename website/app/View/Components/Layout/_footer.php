@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\layout;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class rmstockLogo extends Component
+class _footer extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class rmstockLogo extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.rmstock-logo');
+        return view('components.layout._footer');
     }
 }
