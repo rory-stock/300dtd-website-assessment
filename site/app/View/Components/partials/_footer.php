@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\layout;
+namespace App\View\Components\partials;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class _footer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layout._footer');
+        return view('components.layouts._footer');
     }
 }

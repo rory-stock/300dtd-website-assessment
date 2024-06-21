@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Layout;
+namespace App\View\Components\partials;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class _head extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layout._head');
+        return view('components.layouts._head');
     }
 }

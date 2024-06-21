@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\layout;
+namespace App\View\Components\partials;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class _header extends Component
+class _nav extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class _header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layout._header');
+        return view('components.partials._nav');
     }
 }
