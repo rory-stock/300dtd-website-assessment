@@ -5,3 +5,8 @@
 .font-league-spartan {
     font-family: 'League Spartan', sans-serif;
 }
+
+* {
+    font-family: 'League Spartan', sans-serif;
+    box-sizing: border-box;
+}
