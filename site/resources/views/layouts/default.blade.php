@@ -7,17 +7,19 @@
 
 <body>
 
-<header>
+<div class="flex flex-col h-screen justify-between">
+<header class="h-24">
     @include('includes.header')
 </header>
 
-<main>
+<main class="mb-auto h-10">
     @yield('content')
 </main>
 
-<footer>
+<footer class="h-10">
     @include('includes.footer')
 </footer>
+</div>
 
 </body>
 
