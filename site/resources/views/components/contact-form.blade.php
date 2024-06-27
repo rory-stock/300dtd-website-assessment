@@ -1,4 +1,4 @@
-<form action="/send-mail" method="POST" class="flex flex-col gap-8 left-16 mt-4 absolute">
+<form action="/send-mail" method="POST" hx-boost="true" class="flex flex-col gap-8 left-16 mt-4 absolute">
     @csrf
     <div class="container w-full max-w-xs mx-auto">
         <label>Name</label>
@@ -26,6 +26,7 @@
                   x-init="resize()"
                   @input="resize()"
                   type="text"
+                  name="message"
                   class="flex w-full h-auto min-h-[80px] px-3 py-2 text-sm bg-white border rounded border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"></textarea>
     </div>
 
@@ -33,7 +34,6 @@
     <button @click="alertIsVisible = true" type="submit" class="container inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded bg-black hover:bg-zinc-800 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
         Submit
     </button>
-
         <template x-teleport="body">
             <div x-show="alertIsVisible" class="absolute bottom-14 right-4 w-full max-w-md overflow-hidden rounded-lg border bg-white text-slate-700 dark:bg-black dark:text-slate-300" role="alert" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
                 <div class="flex w-full items-center gap-2 p-4">

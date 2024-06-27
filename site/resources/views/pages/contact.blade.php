@@ -9,10 +9,7 @@
             Contact Details:
         </p>
         <p class="mb-1">
-            Email: rorystock06@gmail.com
-        </p>
-        <p>
-            Phone: +64 21 079 9058
+            Email: contact@rorystock.com
         </p>
     </div>
 

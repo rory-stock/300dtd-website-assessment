@@ -3,32 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use PharIo\Manifest\Email;
+use Resend\Laravel\Facades\Resend;
 
 class MailController extends Controller
 {
-public function sendMail(Request $request)
-{
-    $request->validate([
-        'name' => 'required',
-        'email' => 'required|email',
-        'subject' => 'required',
-        'message' => 'required'
-    ]);
+    public function sendMail(Request $request)
+    {
+        $name = $request['name'];
+        $email = $request['email'];
+        $subject = $request['subject'];
+        $message = $request['message'];
 
-    $data = array(
-        'name' => $request->name,
-        'email' => $request->email,
-        'subject' => $request->subject,
-        'message' => $request->message
-    );
-
-
-    Mail::send('pages.contact', $data, function ($message) use ($data) {
-        $message->from($data['email']);
-        $message->to('rorystock06@gmail.com');
-        $message->subject($data['subject']);
-    });
-}
-
+        Resend::emails()->send([
+            'from' => '' . $name . '<contact@rorystock.com>',
+            'to' => 'rorystock06@gmail.com',
+            'subject' => $subject,
+            'html' => '
+            <h3>Sender Name: <h4>'. $name .'</h4></h3><br>
+            <h3>Sender Email: <h4>'. $email .'</h4></h3><br>
+            <h3>Message: <h4>'. $message .'</h4></h3>
+            ',
+        ]);
+        return redirect('/contact');
+    }
 }

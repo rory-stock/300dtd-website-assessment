@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Resend\Laravel\Facades\Resend;
 
 
 // Pages -------------------------------------------------------------------------------------------
@@ -14,6 +17,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 // -------------------------------------------------------------------------------------------------
 
+
+// Controllers -------------------------------------------------------------------------------------
+Route::get('/local-image/{imageName}', [ImageController::class, 'localImage']);
+
+Route::post('/send-mail', [MailController::class, 'sendMail']);
+// -------------------------------------------------------------------------------------------------
 
 // Profile -----------------------------------------------------------------------------------------
 Route::middleware('auth')->group(function () {
