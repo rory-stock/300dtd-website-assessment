@@ -22,6 +22,8 @@ Route::get('/dashboard', function () {
 Route::get('/local-image/{imageName}', [ImageController::class, 'localImage']);
 
 Route::post('/send-mail', [MailController::class, 'sendMail']);
+
+Route::get('/r2-image/{imageName}', [ImageController::class, 'displayR2Image']);
 // -------------------------------------------------------------------------------------------------
 
 // Profile -----------------------------------------------------------------------------------------
