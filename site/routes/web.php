@@ -19,11 +19,11 @@ Route::get('/dashboard', function () {
 
 
 // Controllers -------------------------------------------------------------------------------------
-Route::get('/local-image/{imageName}', [ImageController::class, 'localImage']);
+Route::get('/local-image/{imageName}', [ImageController::class, 'displayLocalImage']);
 
 Route::post('/send-mail', [MailController::class, 'sendMail']);
 
-Route::get('/r2-image/{imageName}', [ImageController::class, 'displayR2Image']);
+// Route::get('/r2-image/{imageName}', [ImageController::class, 'displayR2Image']);
 // -------------------------------------------------------------------------------------------------
 
 // Profile -----------------------------------------------------------------------------------------
