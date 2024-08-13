@@ -7,12 +7,12 @@
 
 <body>
 
-<div class="flex flex-col h-screen justify-between">
+<div class="flex flex-col h-screen">
 <header class="h-24">
     @include('includes.header')
 </header>
 
-<main class="mb-auto h-10">
+<main class="grow">
     @yield('content')
 </main>
 
