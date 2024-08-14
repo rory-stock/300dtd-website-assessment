@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('portfolioImages', function (Blueprint $table) {
-            $table->id();
+            $table->id() -> autoIncrement();
             $table->string('image_path');
             $table->string('image_name');
         });

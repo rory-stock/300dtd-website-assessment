@@ -1,13 +1,25 @@
 @extends('layouts.default')
 
 @section('content')
+    @php
+        use Illuminate\Support\Facades\DB;
 
-    <div class="flex justify-center">
-        <div class="flex flex-col h-full w-1/2 overflow-hidden bg-white border rounded">
-            <div class="flex items-center px-3">
-                <svg class="w-4 h-4 mr-0 text-neutral-400 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
-                <input type="text" class="flex w-full px-2 py-3 text-sm bg-transparent border-0 rounded-md outline-none focus:outline-none focus:ring-0 focus:border-0 placeholder:text-neutral-400 h-11 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Search for your race plate...">
+        $events = DB::table('event')->get();
+        $event_images = DB::table('event_images')->get();
+    @endphp
+
+    <div class="p-4">
+            @foreach ($events as $event)
+            <div class="rounded-lg overflow-hidden border border-neutral-200/60 bg-white text-neutral-700 shadow-sm w-[380px]">
+                <div class="relative">
+                    <img src="" class="w-full h-auto" />
+                </div>
+                <div class="p-7">
+                    <h2 class="mb-2 text-lg font-bold leading-none tracking-tight">{{ $event->EventName }}</h2>
+                    <p class="text-neutral-500">Date: {{ $event->EventDate }}</p>
+                    <p class="mb-5 text-neutral-500">Location: {{ $event->EventLocation }}</p>
+                    <a href="/view-event/{{ $event->id }}" class="inline-flex items-center justify-center w-full h-10 px-4 py-2 text-sm font-medium text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-neutral-950 hover:bg-neutral-800">View Event</a>
+                </div>
             </div>
-        </div>
-    </div>
+            @endforeach
 @endsection

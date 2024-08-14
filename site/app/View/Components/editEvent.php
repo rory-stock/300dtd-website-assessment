@@ -6,12 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class admin-panel extends Component
+class editEvent extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+
+    )
     {
         //
     }
@@ -21,6 +23,6 @@ class admin-panel extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin-panel');
+        return view('components.edit-event');
     }
 }

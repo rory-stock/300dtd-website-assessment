@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class admin-content extends Component
+class imageUploadForm extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class admin-content extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin-content');
+        return view('components.image-upload-form');
     }
 }

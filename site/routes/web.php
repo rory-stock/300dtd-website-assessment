@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use Resend\Laravel\Facades\Resend;
 
 
 // Pages -------------------------------------------------------------------------------------------
@@ -15,6 +15,7 @@ Route::view('/contact', 'pages.contact', ['active' => 'contact']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/view-event/{id}', [EventController::class, 'viewEvent']);
 // -------------------------------------------------------------------------------------------------
 
 
@@ -23,7 +24,9 @@ Route::get('/local-image/{imageName}', [ImageController::class, 'displayLocalIma
 
 Route::post('/send-mail', [MailController::class, 'sendMail']);
 
-// Route::get('/r2-image/{imageName}', [ImageController::class, 'displayR2Image']);
+Route::post('/new-event', [EventController::class, 'createEvent'])->middleware('auth', 'verified');
+Route::post('/edit-event', [EventController::class, 'editEvent'])->middleware('auth', 'verified');
+Route::post('/delete-event', [EventController::class, 'deleteEvent'])->middleware('auth', 'verified');
 // -------------------------------------------------------------------------------------------------
 
 // Profile -----------------------------------------------------------------------------------------

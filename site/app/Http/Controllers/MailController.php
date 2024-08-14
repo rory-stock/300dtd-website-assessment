@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use PharIo\Manifest\Email;
 use Resend\Laravel\Facades\Resend;
 
 class MailController extends Controller

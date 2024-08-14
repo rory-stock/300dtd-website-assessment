@@ -12,17 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('event', function (Blueprint $table) {
-            $table->id();
+            $table->id() -> autoIncrement();
             $table->string('EventName');
-            $table->string('EventDescription');
+            $table->date('EventDate');
             $table->string('EventLocation');
+            $table->string('EventFolder');
+            $table->string('CoverImage') -> nullable();
         });
 
         // Event images table
         Schema::create('event_images', function (Blueprint $table) {
-            $table->id();
+            $table->id() -> autoIncrement();
             $table->foreignId('event_id')->constrained()->onDelete('cascade');
-            $table->string('image_path');
+            $table->string('display_image_path');
+            $table->string('download_image_path');
             $table->string('image_name');
         });
     }
