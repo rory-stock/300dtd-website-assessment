@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 // Pages -------------------------------------------------------------------------------------------
 Route::view('/', 'pages.home', ['active' => 'home']);
-Route::view('/portfolio', 'pages.portfolio', ['active' => 'portfolio']);
+//Route::view('/portfolio', 'pages.portfolio', ['active' => 'portfolio']);
 Route::view('/events', 'pages.events', ['active' => 'events']);
 Route::view('/contact', 'pages.contact', ['active' => 'contact']);
 Route::get('/dashboard', function () {

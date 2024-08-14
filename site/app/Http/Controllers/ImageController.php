@@ -11,7 +11,7 @@ class ImageController extends Controller
     // Display locally stored image
     public function displayLocalImage($imageName)
     {
-        return response()->file(storage_path('app/public/images/'.$imageName.'.jpg'));
+        return response()->file(storage_path('app/public/images/'.$imageName.'.webp'));
     }
 
     // Download image from R2

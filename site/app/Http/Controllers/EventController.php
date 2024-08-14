@@ -6,7 +6,6 @@ use http\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use function Laravel\Prompts\error;
 
 class EventController extends Controller
 {
