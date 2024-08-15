@@ -47,13 +47,39 @@ class EventController extends Controller
         $eventDate = DB::table('event')->where('id', $eventID)->value('EventDate');
         $eventLocation = DB::table('event')->where('id', $eventID)->value('EventLocation');
 
-        $images = DB::table('event_images')->where('event_id', $eventID)->get();
+//      $images = DB::table('event_images')->where('event_id', $eventID)->get();
+
+//      Just for testing
+        $images = array_filter(Storage::disk('public')->files('images'), function ($item) {
+            return strpos($item, '.webp');
+        });
+        $images = array_map(function ($item) {
+            return str_replace('images/', '', $item);
+        }, $images);
+//      End of testing stuff
+
+        $imageCount = 0;
+        $columnLength = count($images) / 3;
+
+        foreach ($images as $image) {
+            if ($imageCount < $columnLength) {
+                $columnOne[] = $image;
+            } elseif ($imageCount < $columnLength * 2) {
+                $columnTwo[] = $image;
+            } else {
+                $columnThree[] = $image;
+            }
+            $imageCount++;
+        }
 
         return view('pages.view-event')
             ->with(['eventName' => $eventName,
                     'eventDate' => $eventDate,
                     'eventLocation' => $eventLocation,
                     'images' => $images,
+                    'columnOne' => $columnOne,
+                    'columnTwo' => $columnTwo,
+                    'columnThree' => $columnThree,
                     'active' => 'events'
             ]);
     }
@@ -87,6 +113,15 @@ class EventController extends Controller
         }
         return redirect('/events');
     }
+
+    public function deleteEvent(Request $request)
+    {
+        $eventID = $request['id'];
+        DB::table('event')->where('id', $eventID)->delete();
+        DB::table('event_images')->where('event_id', $eventID)->delete();
+        return redirect('/events');
+    }
+
     private function removeFileExtension(mixed $image)
     {
         return pathinfo($image, PATHINFO_FILENAME);

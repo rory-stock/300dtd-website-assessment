@@ -7,19 +7,11 @@
     $images =  DB::table('event_images')->get();
 @endphp
 
-@if($segment == '')
-    <x-new-image/>
-@endif
 
-@if($segment == 'portfolio')
-    <x-new-image/>
-@endif
-
-@if($segment == 'events')
     <p class="flex text-4xl pl-4 pt-4">Events</p>
     <div class="p-4">
         @if (count($events) > 0)
-        <div class="pb-4">
+        <div class="pb-2 flex flex-col gap-2">
         @foreach ($events as $event)
             <div class="relative w-full rounded-lg border bg-white p-4 flex justify-between items-end">
                 <div class="flex flex-col">
@@ -36,4 +28,3 @@
         @endif
         <x-new-event/>
     </div>
-@endif

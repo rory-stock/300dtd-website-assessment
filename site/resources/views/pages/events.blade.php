@@ -8,9 +8,9 @@
         $event_images = DB::table('event_images')->get();
     @endphp
 
-    <div class="p-4">
+    <div class="p-4 flex flex-col sm:flex-row gap-2">
             @foreach ($events as $event)
-            <div class="rounded-lg overflow-hidden border border-neutral-200/60 bg-white text-neutral-700 shadow-sm w-[380px]">
+            <div class="rounded-lg overflow-hidden border border-neutral-200/60 bg-white text-neutral-700 shadow-sm  sm:w-[380px]">
                 <div class="relative">
                     <img src="" class="w-full h-auto" />
                 </div>

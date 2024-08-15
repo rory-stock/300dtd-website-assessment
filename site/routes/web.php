@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Pages -------------------------------------------------------------------------------------------
-Route::view('/', 'pages.home', ['active' => 'home']);
+Route::get('/', [ImageController::class, 'homeImages']);
 //Route::view('/portfolio', 'pages.portfolio', ['active' => 'portfolio']);
 Route::view('/events', 'pages.events', ['active' => 'events']);
 Route::view('/contact', 'pages.contact', ['active' => 'contact']);
@@ -21,6 +21,7 @@ Route::get('/view-event/{id}', [EventController::class, 'viewEvent']);
 
 // Controllers -------------------------------------------------------------------------------------
 Route::get('/local-image/{imageName}', [ImageController::class, 'displayLocalImage']);
+Route::get('/download-r2-image/{fileName}', [ImageController::class, 'downloadR2Image']);
 
 Route::post('/send-mail', [MailController::class, 'sendMail']);
 

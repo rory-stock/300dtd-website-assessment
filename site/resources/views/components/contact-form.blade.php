@@ -1,21 +1,21 @@
-<form action="/send-mail" method="POST" hx-boost="true" class="flex flex-col gap-8 left-16 mt-4 absolute">
+<form action="/send-mail" method="POST" hx-boost="true" class="flex flex-col gap-8 left-12 sm:left-16 mt-4 sm:absolute">
     @csrf
-    <div class="container w-full max-w-xs mx-auto">
+    <div class="container sm:w-full w-fit max-w-xs pl-6 sm:pl-0 sm:mx-auto">
         <label>Name</label>
         <input type="text" name="name" required class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">
     </div>
 
-    <div class="container w-full max-w-xs mx-auto">
+    <div class="container sm:w-full w-fit max-w-xs pl-6 sm:pl-0 sm:mx-auto">
         <label>Email Address</label>
         <input type="email" name="email" required class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">
     </div>
 
-    <div class="container w-full max-w-xs mx-auto">
+    <div class="container sm:w-full w-fit max-w-xs pl-6 sm:pl-0 sm:mx-auto">
         <label>Subject</label>
         <input type="text" name="subject" required class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">
     </div>
 
-    <div class="container w-full max-w-xs mx-auto">
+    <div class="container sm:w-full w-fit max-w-xs pl-6 sm:pl-0 sm:mx-auto">
         <label>Message</label>
         <textarea x-data="{
                                 resize () {
@@ -31,7 +31,7 @@
     </div>
 
     <div x-data="{ alertIsVisible: false }">
-    <button @click="alertIsVisible = true" type="submit" class="container inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded bg-black hover:bg-zinc-800 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+    <button @click="alertIsVisible = true" type="submit" class="container inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded bg-black hover:bg-zinc-800 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none pl-6 sm:pl-0 w-3/4 sm:w-full max-w-xs">
         Submit
     </button>
 {{--        <template x-teleport="body">--}}

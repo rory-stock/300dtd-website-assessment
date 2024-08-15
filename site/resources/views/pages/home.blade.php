@@ -1,31 +1,45 @@
+@php use Illuminate\Support\Facades\Storage; @endphp
 @extends('layouts.default')
 
 @section('content')
+    <div class="flex p-4">
+        <img class="object-cover w-max h-auto aspect-video" src="{{ asset('storage/images/coverImage/R5RS7928.webp') }}" alt="">
+    </div>
 
-    @php
-
-    $homeImages = ['0I0A3785', '0I0A3820', '0I0A3878', '0I0A4125', 'P1003670', 'P1027141', 'R5RS1675', 'R5RS7928', 'R5RS8881', 'R5RS8895'];
-    $imageCount = 0;
-    @endphp
-
-    <div class="flex gap-4 col">
-        <div class="gap-4 flex">
-    @foreach($homeImages as $image)
-        <div class="row-4">
-            <img src="/local-image/{{ $image }}"
-                 alt="Image of mountain biker"
-                 class="h-auto max-w-2xl object-cover object-center"
-            />
+    <div class="sm:grid grid-cols-3 gap-4 pl-4 pr-4 pb-4 hidden">
+        <div class="gap-4 flex flex-col">
+            @foreach($columnOne as $image)
+            <div>
+                <img class="max-h-full w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+            </div>
+            @endforeach
         </div>
-        @php
-        if ($imageCount == 3) {
-            echo '</div><div class="grid gap-4">';
-            $imageCount = 0;
-        } else {
-            $imageCount++;
-        }
-        @endphp
-    @endforeach
+        <div class="gap-4 flex flex-col">
+            @foreach($columnTwo as $image)
+            <div>
+                <img class="max-h-full w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+            </div>
+            @endforeach
+        </div>
+        <div class="gap-4 flex flex-col">
+            @foreach($columnThree as $image)
+            <div>
+                <img class="max-h-full
+                w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+            </div>
+            @endforeach
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-4 sm:hidden pl-4 pr-4 pb-4">
+        @foreach($images as $image)
+        <div>
+            <img class="w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+        </div>
+        @endforeach
+
+
+
 
 
 @endsection
