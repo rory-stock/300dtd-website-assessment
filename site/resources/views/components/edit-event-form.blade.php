@@ -13,13 +13,6 @@
         <label for="location" class="text-lg">Event Location</label>
         <input type="text" id="location" name="eventLocation" placeholder="{{ $eventLocation }}" class="w-full h-10 px-3 py-2 mt-1 text-sm border border-neutral-300 rounded-md focus:ring-neutral-900 focus:border-neutral-900">
     </div>
-    <div class="flex flex-col pb-4">
-        <div class="flex gap-1 items-center">
-        <label for="description" class="text-lg">Event Folder</label>
-        <label for="description" class="text-sm text-gray-500">(Folder must be uploaded to Cloudflare R2 to show)</label>
-        </div>
-        <input type="text" id="description" name="eventFolder" placeholder="{{ $eventFolder }}" class="w-full h-10 px-3 py-2 mt-1 text-sm border border-neutral-300 rounded-md focus:ring-neutral-900 focus:border-neutral-900">
-    </div>
     <input type="hidden" name="eventID" value="{{ $eventID }}">
 
     @php
@@ -32,7 +25,7 @@
     <div class="space-y-3 max-h-40 overflow-y-scroll border border-neutral-300 rounded-md focus:ring-neutral-900 focus:border-neutral-900 p-2 mb-2">
         @foreach($images as $image)
             <label class="flex items-center gap-2 p-5 space-x-3 bg-white border rounded-md shadow-sm hover:bg-gray-50 border-neutral-200/70">
-                <input type="radio" id="cover" name="radio-group" value="{{ $image->id }}" class="text-gray-900 translate-y-px focus:ring-gray-700" />
+                <input type="radio" id="cover" name="coverImage" value="{{ $image->id }}" class="text-gray-900 translate-y-px focus:ring-gray-700" />
                 <span class="relative flex flex-col text-left space-y-1.5 leading-none">
                     <img src="{{ $image->display_image_path }}" alt="" class="w-auto max-h-20 object-cover rounded-md">
                 </span>

@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('event', function (Blueprint $table) {
+        Schema::create('event_images', function (Blueprint $table) {
             $table->id() -> autoIncrement();
-            $table->string('EventName');
-            $table->date('EventDate');
-            $table->string('EventLocation');
-            $table->string('EventFolder');
-            $table->string('CoverImage') -> nullable();
+            $table->foreignId('event_id')->constrained()->onDelete('cascade');
+            $table->string('display_image_path');
+            $table->string('download_image_path');
+            $table->string('image_name');
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('event');
+        Schema::dropIfExists('event_images');
     }
 };

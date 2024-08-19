@@ -5,15 +5,23 @@
         use Illuminate\Support\Facades\DB;
 
         $events = DB::table('event')->get();
-        $event_images = DB::table('event_images')->get();
     @endphp
 
     <div class="p-4 flex flex-col sm:flex-row gap-2">
             @foreach ($events as $event)
+                @php
+                if ($event->CoverImage == null) {
+                    $coverImage = DB::table('event_images')->get('display_image_path')->where('id', $event->CoverImage);
+                } else {
+                    $coverImage = false;
+                }
+                @endphp
             <div class="rounded-lg overflow-hidden border border-neutral-200/60 bg-white text-neutral-700 shadow-sm  sm:w-[380px]">
+                @if ($coverImage)
                 <div class="relative">
-                    <img src="" class="w-full h-auto" />
+                    <img src="{{ $coverImage }}" class="w-full h-auto" alt=""/>
                 </div>
+                @endif
                 <div class="p-7">
                     <h2 class="mb-2 text-lg font-bold leading-none tracking-tight">{{ $event->EventName }}</h2>
                     <p class="text-neutral-500">Date: {{ $event->EventDate }}</p>

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use http\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -26,18 +25,18 @@ class EventController extends Controller
             'EventLocation' => $eventLocation,
             'EventFolder' => $eventFolder
         ]);
+
         $eventID = DB::getPdo()->lastInsertId();
 
         foreach ($images as $image) {
             $imageName = $this->removeFileExtension($image);
             DB::table('event_images')->insert([
                 'event_id' => $eventID,
-                'display_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/Web%20Res/'. $image.'.webp',
-                'download_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/High%20Res/'. $image.'.jpg',
+                'display_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/Web%20Res/' . $imageName . '.webp',
+                'download_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/High%20Res/' . $imageName . '.jpg',
                 'image_name' => $imageName
             ]);
         }
-        return redirect('/events');
     }
 
     public function viewEvent($id)
@@ -89,27 +88,20 @@ class EventController extends Controller
         $eventName = $request['eventName'];
         $eventDate = $request['eventDate'];
         $eventLocation = $request['eventLocation'];
-        $eventFolder = $request['eventFolder'];
+        $coverImage = $request['coverImage'];
         $eventID = $request['id'];
 
-        $cloudflareEventFolder = str_replace(' ', '%20', $eventFolder);
-
-        $images = Storage::disk('r2')->Files($eventFolder . '/Low Res/');
-
-        DB::table('event')->where('id', $eventID)->update([
-            'EventName' => $eventName,
-            'EventDate' => $eventDate,
-            'EventLocation' => $eventLocation,
-            'EventFolder' => $eventFolder
-        ]);
-
-        foreach ($images as $image) {
-            $imageName = $this->removeFileExtension($image);
-            DB::table('event_images')->where('event_id', $eventID)->update([
-                'display_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/Web%20Res/'. $image.'.webp',
-                'download_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/High%20Res/'. $image.'.jpg',
-                'image_name' => $imageName
-            ]);
+        if ($eventName) {
+            DB::table('event')->where('id', $eventID)->update(['EventName' => $eventName]);
+        }
+        if ($eventDate) {
+            DB::table('event')->where('id', $eventID)->update(['EventDate' => $eventDate]);
+        }
+        if ($eventLocation) {
+            DB::table('event')->where('id', $eventID)->update(['EventLocation' => $eventLocation]);
+        }
+        if ($coverImage) {
+            DB::table('event')->where('id', $eventID)->update(['CoverImage' => $coverImage]);
         }
         return redirect('/events');
     }
