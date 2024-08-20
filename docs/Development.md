@@ -135,12 +135,15 @@ Some code from the contact form:
 Screenshot from the website showing the contact form:
 ![Website screenshot](images/image31.png)
 
+> Users like the contact form. Thought it was effective and easy to understand and use. From an admin perspective the way emails are sent to the site owner is easy to understand and users were happy with how it was implemented. No changes needed.
 
 ### Tuesday 6th August
 Adding the migration file for the events table. The database being used is the internal sqlite database that comes with Laravel.
 
 Migration file:
 ![Code screenshot](images/image16.png)
+
+> No user feedback relevant for this.
 
 ### Tuesday 13th August
 Integrating laravel breeze into the website for handling the admin login and authentication. When logged in an admin panel will show when on the events page of the website allowing the admin to edit events and add new ones. As well as integrating breeze the admin panel has also been implemented here.
@@ -153,6 +156,10 @@ Screenshot of the admin login page:
 Screenshot of the admin panel:
 ![website screenshot](images/image33.png)
 
+> No user feedback needed on the admin panel as it is not finished enough yet.
+
+> Users happy with how the sign in page looks. Easy to understand. No changes needed.
+
 ### Wednesday 14th August
 Working on adding new events. Form and UI added but backend not working at this stage for images.
 
@@ -163,6 +170,8 @@ Sample of the form for adding new events:
 ![code screenshot](images/image21.png)<br>
 Screenshot of the form for adding new events:
 ![website screenshot](images/image34.png)
+
+> Users happy with how the admin event form looks. Thought it looked very professional and easy to use. No changes needed for the UI.
 
 ### Thursday 15th August
 Working on displaying some images on the home page. These images are just stored locally and don't need to be in the database.
@@ -177,6 +186,8 @@ Screenshot of the home page with images:
 Screenshot of the home page with images:
 ![website screenshot](images/image36.png)
 
+> This design follows the feedback got from the users in the design phase. They liked the layout of the page and though it worked well. We spent some time talking about how big images should be and decided on three main image columns for desktop view which keeps the images at a good size but also allows for a good number of images to be displayed. The mobile view is just one column so that each image is easily viewable.
+
 ### Friday 16th August
 Working on making the whole website mobile responsive. This is done using Tailwind CSS breakpoints. Everything is now mobile responsive.
 
@@ -187,12 +198,16 @@ Code snippets from some of the CSS:
 Screenshot of the website on mobile:
 ![website screenshot](images/image37.png)
 
-Images in the events section can also be clicked on and downloaded. Note: Download doesn't yet work as the folder name needs to be carried over, this will be fine once db connection fixed.
+Images in the events section can also be clicked on and downloaded. Note: Download doesn't yet work as the folder name needs to be carried over, this will be fine once db connection fixed. The images shown at the moment are just pre-set test images.
+
+> Users happy with how the website looks on mobile, there are minimal significant changes from the desktop version so there shouldn't have been any major changes needed here.
 
 Code snippet for downloading images:
 ![Code screenshot](images/image28.png)<br>
 Screenshot of the events section showing the download button:
 ![Website screenshot](images/image38.png)
+
+> Users liked how the download function worked. No changes needed.
 
 ### Tuesday 20th August
 Working on trying to get the event_images table to work. At the moment it is still not working properly.
@@ -201,5 +216,9 @@ Working on trying to get the event_images table to work. At the moment it is sti
 Code snippet from the controller for the event_images:
 ![code screenshot](images/image30.png)
 
+> No user feedback needed on this yet.
+
 ### Wednesday 21st August
 Working on adding dev logs from code commits on github. All dev logs fully updated now.
+
+> No user feedback needed on this.
