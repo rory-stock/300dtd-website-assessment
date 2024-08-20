@@ -122,4 +122,67 @@ Added the admin pages for desktop and mobile. The authentication will be handled
 Desktop admin:
 ![Figma screenshot](images/image12.png)
 
-> Users though the admin section was well thought out and would adequately provide a good way to update parts of the website.
+> Users thought the admin section was well thought out and would adequately provide a good way to update parts of the website.
+
+### Thursday 27th June
+Working on the contact form. Emails are sent through resend. Everything works with this.
+
+![Github screenshot](images/image13.png)<br>
+Mail controller that handles sending emails:
+![Code screenshot](images/image14.png)<br>
+Some code from the contact form:
+![Code screenshot](images/image15.png)
+
+### Tuesday 6th August
+Adding the migration file for the events table. The database being used is the internal sqlite database that comes with Laravel.
+
+Migration file:
+![Code screenshot](images/image16.png)
+
+### Tuesday 13th August
+Integrating laravel breeze into the website for handling the admin login and authentication. When logged in an admin panel will show when on the events page of the website allowing the admin to edit events and add new ones. As well as integrating breeze the admin panel has also been implemented here.
+
+![github screenshot](images/image17.png)<br>
+Sample of some of the admin panel code:
+![code screenshot](images/image18.png)
+
+### Wednesday 14th August
+Working on adding new events. Form and UI added but backend not working at this stage for images.
+
+![github screenshot](images/image19.png)<br>
+Controller for adding new events (not fully working at this stage):
+![code screenshot](images/image20.png)<br>
+Sample of the form for adding new events:
+![code screenshot](images/image21.png)
+
+### Thursday 15th August
+Working on displaying some images on the home page. These images are just stored locally and don't need to be in the database.
+
+![github screenshot](images/image22.png)<br>
+Code snippet for displaying images on the home page:
+![code screenshot](images/image23.png)<br>
+Controller for the home page images:
+![code screenshot](images/image24.png)
+
+### Friday 16th August
+Working on making the whole website mobile responsive. This is done using Tailwind CSS breakpoints. Everything is now mobile responsive.
+
+![github screenshot](images/image25.png)<br>
+Code snippets from some of the CSS:
+![code screenshot](images/image26.png)
+![code screenshot](images/image27.png)
+
+Images in the events section can also be clicked on and downloaded. Note: Download doesn't yet work as the folder name needs to be carried over, this will be fine once db connection fixed.
+
+Code snippet for downloading images:
+![Code screenshot](images/image28.png)
+
+### Tuesday 20th August
+Working on trying to get the event_images table to work. At the moment it is still not working properly.
+
+![github screenshot](images/image29.png)<br>
+Code snippet from the controller for the event_images:
+![code screenshot](images/image30.png)
+
+### Wednesday 21st August
+Working on adding dev logs from code commits on github. All dev logs fully updated now.
