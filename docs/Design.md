@@ -135,7 +135,8 @@ Place images here that show your *final design* of your UI: layout, colours, etc
 
 ### Database Structure
 
-Place a image here that shows the *actual database structure* that you implemented: tables, fields and relationships.
+![Database Structure](images/DatabaseStructure.png)
+Note: Only the 'event' table and 'event_images' table are created by me. The other tables are part of the Laravel breeze authentication system and other laravel packages.
 
 ### User Interface Design
 

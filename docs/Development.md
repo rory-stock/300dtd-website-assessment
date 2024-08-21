@@ -124,6 +124,11 @@ Desktop admin:
 
 > Users thought the admin section was well thought out and would adequately provide a good way to update parts of the website.
 
+### Tuesday 11th June
+Working on how the image storage will be implemented. The original plan was to use the google drive api to store images in google drive then show them on the website. I spent a while looking through the GDrive documentation however decided that it was going to be to complicated to implement. I then looked at using an s3 bucket and cloudfront as a CDN however this is excessive for what the website realistically needs and would not be cost effective. I have finally settled on using the Cloudflare R2 free plan which is a fairly generous free plan that should easily cover the needs of the website. This will be implemented using the s3 api through the laravel framework. For images that are unlikely to change regularly such as home page images these will be stored in the public folder of the project.
+
+> No user feedback relevant for this.
+
 ### Thursday 27th June
 Working on the contact form. Emails are sent through resend. Everything works with this.
 
