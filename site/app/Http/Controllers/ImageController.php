@@ -19,6 +19,6 @@ class ImageController extends Controller
         // Download the file
         return response()->streamDownload(function () use ($file) {
             echo $file;
-        }, $fileName, ['Content-Type' => 'image/jpeg']);
+        }, $fileName . '.jpg', ['Content-Type' => 'image/jpeg']);
     }
 }
