@@ -6,12 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class newEvent extends Component
+class editEventForm extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(
+        public string $eventID
+    )
     {
         //
     }
@@ -21,6 +23,6 @@ class newEvent extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.new-event');
+        return view('components.edit-event-form');
     }
 }

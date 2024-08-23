@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class imageUploadForm extends Component
+class modal extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class imageUploadForm extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.image-upload-form');
+        return view('components.modal');
     }
 }

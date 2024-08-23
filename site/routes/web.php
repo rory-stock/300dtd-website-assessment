@@ -1,41 +1,49 @@
 <?php
 
+// Importing the controllers
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ImageController;
-use App\Http\Controllers\MailController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RouteController;
+
 use Illuminate\Support\Facades\Route;
 
-
 // Pages -------------------------------------------------------------------------------------------
-Route::get('/', [ImageController::class, 'homeImages']);
-//Route::view('/portfolio', 'pages.portfolio', ['active' => 'portfolio']);
-Route::view('/events', 'pages.events', ['active' => 'events']);
-Route::view('/contact', 'pages.contact', ['active' => 'contact']);
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/view-event/{id}', [EventController::class, 'viewEvent']);
+Route::get('/', [RouteController::class, 'home']);
+Route::get('/events', function () {
+    return view('pages.events')
+        ->with('active', 'events');
+});
+Route::get('/contact', function () {
+    return view('pages.contact')
+        ->with('active', 'contact');
+});
+Route::get('/view-event/{id}', [RouteController::class, 'viewEvent']);
 // -------------------------------------------------------------------------------------------------
 
+// Auth ---------------------------------------------------------------------------------------------
+Route::get('/login', function () {
+    return view('auth.login')
+        ->with('active', '');
+})->name('login');
 
-// Controllers -------------------------------------------------------------------------------------
-Route::get('/local-image/{imageName}', [ImageController::class, 'displayLocalImage']);
-Route::get('/download-r2-image/{fileName}', [ImageController::class, 'downloadR2Image']);
 
+// -------------------------------------------------------------------------------------------------
+
+// Controllers --------------------------------------------------------------------------------------
+    // Mail controller route(s)
 Route::post('/send-mail', [MailController::class, 'sendMail']);
 
-Route::post('/new-event', [EventController::class, 'createEvent'])->middleware('auth', 'verified');
-Route::post('/edit-event', [EventController::class, 'editEvent'])->middleware('auth', 'verified');
-Route::post('/delete-event', [EventController::class, 'deleteEvent'])->middleware('auth', 'verified');
-// -------------------------------------------------------------------------------------------------
+    // Event controller route(s)
+Route::post('/new-event', [EventController::class, 'createEvent'])->middleware('auth.basic');
+Route::post('/edit-event', [EventController::class, 'editEvent'])->middleware('auth.basic');
+Route::get('/delete-event/{eventID}', [EventController::class, 'deleteEvent'])->middleware('auth.basic');
 
-// Profile -----------------------------------------------------------------------------------------
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-// -------------------------------------------------------------------------------------------------
+    // Image controller route(s)
+Route::get('/download-r2-image/{folder}/{fileName}', [ImageController::class, 'downloadR2Image']);
 
-require __DIR__.'/auth.php';
+    // Auth controller route(s)
+Route::post('/process-login', [AdminController::class, 'processLogin']);
+Route::get('/logout', [AdminController::class, 'logout']);
+// -------------------------------------------------------------------------------------------------
