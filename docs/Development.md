@@ -227,3 +227,5 @@ Code snippet from the controller for the event_images:
 Working on adding dev logs from code commits on github. All dev logs fully updated now.
 
 > No user feedback needed on this.
+
+### Thursday 22nd August

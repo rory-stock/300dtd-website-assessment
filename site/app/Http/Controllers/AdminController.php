@@ -11,6 +11,7 @@ class AdminController extends Controller
 {
     public function processLogin(Request $request)
     {
+        // Validate the request
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -24,25 +25,33 @@ class AdminController extends Controller
             $this->createAdmin();
         }
 
+        // Check if the credentials are correct
         if (auth()->attempt($credentials)) {
+
+            // Regenerate the session
             $request->session()->regenerate();
 
+            // Redirect to the events page
             return redirect()->intended('/events');
         }
 
+        // If the credentials are incorrect, return back with an error
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
 
+    // Logout the user
     public function logout()
     {
         auth()->logout();
 
+        // Invalidate the session
         request()->session()->invalidate();
 
         request()->session()->regenerateToken();
 
+        // Redirect to the home page
         return redirect('/');
     }
 
