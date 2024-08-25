@@ -15,5 +15,6 @@ This is my Level 3 NCEA project for Digital Technologies
 
 The documentation for this project is split into the following sections:
 
-- [Design and Review](Design.md)
-- [Development and Testing](Development.md)
+- [Design and Review](docs/Design.md)
+- [Development and Testing](docs/Development.md)
+- [Setup](docs/Setup.md)

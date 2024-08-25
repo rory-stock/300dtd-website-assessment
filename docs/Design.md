@@ -11,8 +11,9 @@ Assessment Standards: **91902** and **91903**
 
 ## Documentation
 
-- [Home](README.md)
+- [Home](../README.md)
 - [Development and Testing](Development.md)
+- [Setup](Setup.md)
 
 -------------------------------------------------
 
