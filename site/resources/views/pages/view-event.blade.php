@@ -8,9 +8,9 @@
     <h1 class="flex text-2xl sm:text-4xl font-bold sm:mb-4 pt-4 justify-center">
         {{ $eventName }}
     </h1>
-    <div class="flex justify-center gap-6 sm:gap-12 pb-4">
-        <p class="flex text-xl sm:text-2xl pl-4 pt-4 text-grey-500">Location: {{ $eventLocation }}</p>
-        <p class="flex text-xl sm:text-2xl pl-4 pt-4">Date: {{ $eventDate }}</p>
+    <div class="flex justify-center gap-6 sm:gap-12">
+        <p class="flex text-lg sm:text-2xl pl-4 pt-4 text-grey-500">Location: {{ $eventLocation }}</p>
+        <p class="flex text-lg sm:text-2xl pl-4 pt-4">Date: {{ $eventDate }}</p>
     </div>
 
     {{-- Display the event images --}}

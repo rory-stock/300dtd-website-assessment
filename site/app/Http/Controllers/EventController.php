@@ -50,8 +50,8 @@ class EventController extends Controller
             DB::table('event_images')->insert([
                 'created_at' => now(),
                 'event_id' => $eventID,
-                'display_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/Web%20Res/' . $imageName . '.webp',
-                'download_image_path' => 'https://pub-68dfe631ac364c6997d8133c90843c81.r2.dev/' . $cloudflareEventFolder . '/Low%20Res/' . $imageName . '.jpg',
+                'display_image_path' => 'https://r2.rorystock.com/' . $cloudflareEventFolder . '/Web%20Res/' . $imageName . '.webp',
+                'download_image_path' => 'https://r2.rorystock.com/' . $cloudflareEventFolder . '/Low%20Res/' . $imageName . '.jpg',
                 'image_name' => $imageName
             ]);
         }
