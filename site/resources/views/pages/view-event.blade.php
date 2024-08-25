@@ -12,6 +12,7 @@
         <p class="flex text-lg sm:text-2xl pl-4 pt-4 text-grey-500">Location: {{ $eventLocation }}</p>
         <p class="flex text-lg sm:text-2xl pl-4 pt-4">Date: {{ $eventDate }}</p>
     </div>
+    <p class="flex justify-center text-lg pl-4 pt-4 pb-4 text-neutral-500">Click on an image to download it</p>
 
     {{-- Display the event images --}}
     <div class="sm:grid grid-cols-3 gap-4 pl-4 pr-4 pb-4 hidden">
