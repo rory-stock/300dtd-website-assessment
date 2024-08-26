@@ -305,7 +305,7 @@ Added some more images to fill this space.
 
 ### Sunday 25th August
 
-Deployment to Laravel Forge. I decided to use Laravel Forge as it gives a simple and easy way to deploy Laravel projects. Having it automatically redeploy when changes are pushed to Github is super useful. DNS is managed through Cloudflare. It took a bit of time to get the SSL certificate working properly but the site is now fully working and live. It can be accessed at [rorystock.com](https://rorystock.com). The site is run on a Digital Ocean droplet by Laravel Forge.
+Deployment to Laravel Forge. I decided to use Laravel Forge as it gives a simple and easy way to deploy Laravel projects. Having it automatically redeploy when changes are pushed to Github is super useful. DNS is managed through Cloudflare. It took a bit of time to get the SSL certificate working properly but the site is now fully working and live. It can be accessed at <a href="https://www.rorystock.com/" target="_blank">rorystock.com</a>. The site is run on a Digital Ocean droplet by Laravel Forge.
 
 Screenshot of the live site:
 ![Website screenshot](images/image43.png)<br>
