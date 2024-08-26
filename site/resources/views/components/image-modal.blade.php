@@ -15,16 +15,16 @@
                  x-transition:leave="ease-in duration-300"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                 @click="modalOpen=false" class="absolute inset-0 w-full h-full bg-black bg-opacity-40"></div>
+                 @click="modalOpen=false" class="absolute inset-0 w-full h-full bg-white backdrop-blur-sm bg-opacity-70"></div>
             <div x-show="modalOpen"
                  x-trap.inert.noscroll="modalOpen"
                  x-transition:enter="ease-out duration-300"
-                 x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                 x-transition:enter-start="opacity-0 -translate-y-2 sm:scale-95"
                  x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
                  x-transition:leave="ease-in duration-200"
                  x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                 class="relative w-11/12 sm:w-full py-3 bg-white px-6 sm:max-w-lg rounded-sm">
+                 x-transition:leave-end="opacity-0 -translate-y-2 sm:scale-95"
+                 class="relative w-11/12 sm:w-full py-3 bg-white px-6 border border-neutral-300 sm:max-w-lg rounded-md">
                 <div class="flex flex-col gap-3">
                     {{-- Show the image in modal --}}
                     <div class="relative w-auto">

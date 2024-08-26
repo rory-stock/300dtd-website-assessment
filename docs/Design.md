@@ -13,7 +13,7 @@ Assessment Standards: **91902** and **91903**
 
 - [Home](../README.md)
 - [Development and Testing](Development.md)
-- [Setup](Setup.md)
+- [Setup and Admin Access](Setup.md)
 
 -------------------------------------------------
 
@@ -124,11 +124,11 @@ If it is not easy to use then users will be less likely to effectively engage wi
 
 ### Database Structure
 
-Place a image here that shows the *final design* of your database: tables, fields and relationships.
+![Database Structure](images/finalDatabaseStructure.png)
 
 ### User Interface Design
 
-Place images here that show your *final design* of your UI: layout, colours, etc.
+![User Interface Design](images/finalUserInterfaceDesign.png)
 
 -------------------------------------------------
 
@@ -136,13 +136,31 @@ Place images here that show your *final design* of your UI: layout, colours, etc
 
 ### Database Structure
 
-![Database Structure](images/DatabaseStructure.png)
-Note: Only the 'event' table and 'event_images' table are created by me. The other tables are part of the Laravel breeze authentication system and other laravel packages.
+![Database Structure](images/completedDatabaseStructure.png)
+<strong>Note:</strong> Only the 'events' table and 'event_images' table are created by me. The rest are created by Laravel when setting up the project. I have modified the 'users' table though.
 
 ### User Interface Design
 
-Place screenshots and notes here that show your *actual system UI* in action.
+Home Page:
+![User Interface Design](images/completedUserInterfaceDesign.png)<br><br>
 
+Events Page:
+![User Interface Design](images/completedUserInterfaceDesign2.png)<br><br>
+
+Contact Page:
+![User Interface Design](images/completedUserInterfaceDesign3.png)<br><br>
+
+View Event Page:
+![User Interface Design](images/completedUserInterfaceDesign4.png)<br><br>
+
+Admin Panel:
+![User Interface Design](images/completedUserInterfaceDesign5.png)<br><br>
+
+Add/Edit Event Panel:
+![User Interface Design](images/completedUserInterfaceDesign6.png)<br><br>
+
+Download Image Panel:
+![User Interface Design](images/completedUserInterfaceDesign7.png)
 
 -------------------------------------------------
 

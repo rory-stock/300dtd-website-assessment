@@ -3,7 +3,7 @@
 @section('content')
 {{-- Show the cover image --}}
     <div class="flex p-4">
-        <img class="object-cover w-max h-auto aspect-video" src="{{ asset('storage/images/homeImages/cover/R5RS7928.webp') }}" alt="">
+        <img class="object-cover w-max h-auto aspect-video" src="{{ asset($coverImage) }}" alt="">
     </div>
 
 {{-- Show the main images in a grid --}}
@@ -12,7 +12,7 @@
             {{-- Loop through the first column of images --}}
             @foreach($columnOne as $image)
                 <div>
-                    <img class="max-h-full w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+                    <img class="max-h-full w-auto" src="{{ asset($directory . $image) }}" alt="">
                 </div>
             @endforeach
         </div>
@@ -21,7 +21,7 @@
         <div class="gap-4 flex flex-col">
             @foreach($columnTwo as $image)
                 <div>
-                    <img class="max-h-full w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+                    <img class="max-h-full w-auto" src="{{ asset($directory . $image) }}" alt="">
                 </div>
             @endforeach
         </div>
@@ -31,7 +31,7 @@
             @foreach($columnThree as $image)
                 <div>
                     <img class="max-h-full
-                w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+                w-auto" src="{{ asset($directory . $image) }}" alt="">
                 </div>
             @endforeach
         </div>
@@ -41,7 +41,7 @@
     <div class="flex flex-col gap-4 sm:hidden pl-4 pr-4 pb-4">
         @foreach($images as $image)
             <div>
-                <img class="w-auto" src="{{ asset('storage/images/' . $image) }}" alt="">
+                <img class="w-auto" src="{{ asset($directory . $image) }}" alt="">
             </div>
         @endforeach
     </div>

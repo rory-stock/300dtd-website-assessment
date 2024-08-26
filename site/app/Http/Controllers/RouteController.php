@@ -11,24 +11,40 @@ class RouteController extends Controller
     // Return the home view with the images and columns
     public function home()
     {
-        // Get all images from the homeImages folder
+//         Get all images from the homeImages folder
         $homeImages = array_filter(Storage::disk('public')->files('images/homeImages/main'), function ($item) {
             return strpos($item, '.webp');
         });
-        // Remove the 'images/' from the file path
+
+//         Remove the 'images/' from the file path
         $homeImages = array_map(function ($item) {
-            return str_replace('images/', '', $item);
+            return str_replace('images/homeImages/main/', '', $item);
         }, $homeImages);
 
         // Split the images into three columns
-        $columns = $this->columnSplitter($homeImages);
+//        $columns = $this->columnSplitter($homeImages);
 
         // Return the home view with the images and columns
         return view('pages.home', [
             'images'      =>   $homeImages,
-            'columnOne'   =>   $columns['columnOne'],
-            'columnTwo'   =>   $columns['columnTwo'],
-            'columnThree' =>   $columns['columnThree'],
+            'directory' => 'storage/images/homeImages/main/',
+            'coverImage' => 'storage/images/homeImages/cover/R5RS7928.webp',
+            'columnOne'   =>   [
+                '0I0A3785.webp',
+                '0I0A3820.webp',
+                '0I0A3878.webp',
+            ],
+            'columnTwo'   =>   [
+                '0I0A4125.webp',
+                '4_1.webp',
+                'P1003670.webp',
+            ],
+            'columnThree' =>   [
+                'P1027141.webp',
+                'R5RS1675.webp',
+                'R5RS8881.webp',
+                'R5RS4616.webp',
+            ],
             'active'      =>   'home',
         ]);
     }
@@ -69,10 +85,12 @@ class RouteController extends Controller
         $imageCount = 0;
         $columnLength = count($images) / 3;
 
+        // Initialize the columns
         $columnOne = [];
         $columnTwo = [];
         $columnThree = [];
 
+        // Go through each image and add it to a column
         foreach ($images as $image) {
             if ($imageCount < $columnLength) {
                 $columnOne[] = $image;
@@ -84,6 +102,7 @@ class RouteController extends Controller
             $imageCount++;
         }
 
+        // Return the columns
         return [
             'columnOne'   =>   $columnOne,
             'columnTwo'   =>   $columnTwo,

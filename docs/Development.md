@@ -13,7 +13,7 @@ Assessment Standards: **91902** and **91903**
 
 - [Home](../README.md)
 - [Design and Review](Design.md)
-- [Setup](Setup.md)
+- [Setup and Admin Access](Setup.md)
 
 -------------------------------------------------
 
@@ -29,6 +29,8 @@ I spent quite a lot of time trying to use the google drive api to allow site use
 
 > No user feedback relevant for this.
 
+---
+
 ### Friday 31st May
 
 Working on site flow using Excalidraw.
@@ -40,6 +42,8 @@ This is only the user interface, I still need to make an admin interface to allo
 
 > Users happy with site flow at the moment, as the site progresses this may get modified slightly, but the site does not demand a particularly complex layout. I will however get user more user feedback for when I design the admin interface.
 
+---
+
 ### Friday 31st May
 
 Database design with DrawSQL
@@ -49,6 +53,8 @@ Started designing the database for the website. I may need to add more tables to
 ![Draw SQL screenshot](images/image1.png)
 
 > No particularly relevant user feedback, just making sure that any relevant image IPTC/copyright data is included in the database.
+
+---
 
 ### Friday 31st May
 
@@ -76,6 +82,8 @@ Updated Mobile Site:
 Updated Desktop Site:
 ![Screenshot of Figma desktop design](images/image6.png)
 
+---
+
 ### Thursday 6th June
 
 Admin section of database with DrawSQL
@@ -85,6 +93,8 @@ Added an admin table to my DrawSQL database design. To ensure admin security no 
 
 > No user feedback relevant for this.
 
+---
+
 ### Sunday 9th June
 
 Admin page flow with Excalidraw
@@ -93,6 +103,8 @@ Designed the flow for the admin page. This will allow the user to upload images 
 ![Screenshot of excalidraw](images/image8.png)
 
 > Feedback lower down
+
+---
 
 ### Sunday 9th June
 
@@ -106,6 +118,8 @@ Updated Desktop Site:
 
 > User feedback: The new layout with the different sized, non-symmetrical images is a great improvement. Users liked the alternate layout I designed which uses a type of parallax scrolling. Users liked the new non-symmetrical layout of the portfolio and events sections.
 
+---
+
 ### Sunday 9th June
 
 Finalising DB design with DrawSQL. Home page images will be stored in the public folder inside the project as these don't need to be stored on the database. 
@@ -113,6 +127,8 @@ Finalising DB design with DrawSQL. Home page images will be stored in the public
 ![DrawSQL screenshot](images/image11.png)
 
 This database design will address the end-users feedback about copyright by storing relevant IPTC/copyright information in the database.
+
+---
 
 ### Sunday 9th June
 
@@ -125,10 +141,14 @@ Desktop admin:
 
 > Users thought the admin section was well thought out and would adequately provide a good way to update parts of the website.
 
+---
+
 ### Tuesday 11th June
 Working on how the image storage will be implemented. The original plan was to use the google drive api to store images in google drive then show them on the website. I spent a while looking through the GDrive documentation however decided that it was going to be to complicated to implement. I then looked at using an s3 bucket and cloudfront as a CDN however this is excessive for what the website realistically needs and would not be cost effective. I have finally settled on using the Cloudflare R2 free plan which is a fairly generous free plan that should easily cover the needs of the website. This will be implemented using the s3 api through the laravel framework. For images that are unlikely to change regularly such as home page images these will be stored in the public folder of the project.
 
 > No user feedback relevant for this.
+
+---
 
 ### Thursday 27th June
 Working on the contact form. Emails are sent through resend. Everything works with this.
@@ -143,6 +163,8 @@ Screenshot from the website showing the contact form:
 
 > Users like the contact form. Thought it was effective and easy to understand and use. From an admin perspective the way emails are sent to the site owner is easy to understand and users were happy with how it was implemented. No changes needed.
 
+---
+
 ### Tuesday 6th August
 Adding the migration file for the events table. The database being used is the internal sqlite database that comes with Laravel.
 
@@ -150,6 +172,8 @@ Migration file:
 ![Code screenshot](images/image16.png)
 
 > No user feedback relevant for this.
+
+---
 
 ### Tuesday 13th August
 Integrating laravel breeze into the website for handling the admin login and authentication. When logged in an admin panel will show when on the events page of the website allowing the admin to edit events and add new ones. As well as integrating breeze the admin panel has also been implemented here.
@@ -166,6 +190,8 @@ Screenshot of the admin panel:
 
 > Users happy with how the sign in page looks. Easy to understand. No changes needed.
 
+---
+
 ### Wednesday 14th August
 Working on adding new events. Form and UI added but backend not working at this stage for images.
 
@@ -178,6 +204,8 @@ Screenshot of the form for adding new events:
 ![website screenshot](images/image34.png)
 
 > Users happy with how the admin event form looks. Thought it looked very professional and easy to use. No changes needed for the UI.
+
+---
 
 ### Thursday 15th August
 Working on displaying some images on the home page. These images are just stored locally and don't need to be in the database.
@@ -193,6 +221,8 @@ Screenshot of the home page with images:
 ![website screenshot](images/image36.png)
 
 > This design follows the feedback got from the users in the design phase. They liked the layout of the page and though it worked well. We spent some time talking about how big images should be and decided on three main image columns for desktop view which keeps the images at a good size but also allows for a good number of images to be displayed. The mobile view is just one column so that each image is easily viewable.
+
+---
 
 ### Friday 16th August
 Working on making the whole website mobile responsive. This is done using Tailwind CSS breakpoints. Everything is now mobile responsive.
@@ -215,6 +245,8 @@ Screenshot of the events section showing the download button:
 
 > Users liked how the download function worked. No changes needed.
 
+---
+
 ### Tuesday 20th August
 Working on trying to get the event_images table to work. At the moment it is still not working properly.
 
@@ -224,9 +256,60 @@ Code snippet from the controller for the event_images:
 
 > No user feedback needed on this yet.
 
+---
+
 ### Wednesday 21st August
 Working on adding dev logs from code commits on github. All dev logs fully updated now.
 
 > No user feedback needed on this.
 
-### Thursday 22nd August
+---
+
+### Friday 23nd August
+Complete site overhaul. I was unable to find the bug that was stopping the event_images table from working properly when creating or editing an event. I decided to create a new Laravel project and copy the code over in parts while optimising, commenting, simplifying and cutting unnecessary parts at the same time. Thankfully this worked and the event_images table works fine now. 
+
+Features changed, added, or cut:
+    
+- Laravel Breeze removed and replaced with a far simpler auth system. As this site only requires one admin account that shouldn't really need to be changed Laravel Breeze was excessive and contained a lot of functionality that was never really used. By taking it out it significantly cuts down the number of files and the complexity.
+
+- Components such as panels and modals have been simplified. Previously there were individual modals for each use case. Using slots this has been simplified down and the data is now sent to one component. (e.g. There now only two modal components and the button icon and content are passed to it as slots)
+
+- All code commented. Obviously this excludes the code that is part of the laravel framework.
+
+- Image download button in the view-event page now works.
+
+![github screenshot](images/image39.png)<br>
+Example of commented code:
+![code screenshot](images/image40.png)<br>
+Example of slots for components:
+![code screenshot](images/image41.png)<br>
+Screenshot of the new login page:
+![website screenshot](images/image42.png)
+
+> User feedback: Not much is changed on the frontend here, mostly just code changes. Only significant change was the the new login system which the users really liked the simplicity of. Happy with how it is so far and nothing needs changed at the moment.
+
+At this stage all the features are fully functional and the website is basically finished.
+
+----
+
+### Sunday 25th August
+
+Final user feedback.
+
+> Mentioned that the lower right area of the home page was a bit empty because of there not being enough images.
+
+Added some more images to fill this space.
+
+> Users happy with the home page now. No other changes needed.
+---
+
+### Sunday 25th August
+
+Deployment to Laravel Forge. I decided to use Laravel Forge as it gives a simple and easy way to deploy Laravel projects. Having it automatically redeploy when changes are pushed to Github is super useful. DNS is managed through Cloudflare. It took a bit of time to get the SSL certificate working properly but the site is now fully working and live. It can be accessed at [rorystock.com](https://rorystock.com). The site is run on a Digital Ocean droplet by Laravel Forge.
+
+Screenshot of the live site:
+![Website screenshot](images/image43.png)<br>
+
+> Users happy with the live site. Site was fully looked over in the final user feedback so no changes needed here.
+
+---

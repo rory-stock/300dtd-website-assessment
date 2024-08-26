@@ -59,9 +59,9 @@ class AdminController extends Controller
     private function createAdmin()
     {
         DB::table('users')->insert([
-            'name' => 'Admin',
-            'email' => 'admin@rorystock.com',
-            'password' => Hash::make('adminadmin'),
+            'name' => config('admin.name'),
+            'email' => config('admin.email'),
+            'password' => Hash::make(config('admin.password')),
             'created_at' => now()
         ]);
     }
@@ -69,6 +69,6 @@ class AdminController extends Controller
     // Delete all users except the admin
     private function deleteOtherUsers()
     {
-        DB::table('users')->where('email', '!=', 'admin@rorystock.com')->delete();
+        DB::table('users')->where('email', '!=', config('admin.email'))->delete();
     }
 }
