@@ -316,32 +316,75 @@ Screenshot of the live site:
 
 ## Testing Log
 
+Testing is done using the W3C HTML Validator. Because the site uses HTMX and Alpine.js the validator will show errors for these. But they can be ignored as they are not actually errors.
+
 ### Home Page
 
-
+Passed with no errors on the first try.
+![Screenshot of test results](images/image44.png)
 
 ---
 
 ### Events Page
 
+Passed with no errors on the first try.
+![Screenshot of test results](images/image45.png)
 
+---
+
+### Login Page
+
+Had one error but it was due to a something handled by Laravel that I can't change.
+
+The error:
+![Screenshot of test results](images/image46.png)
+
+The Code:
+![Screenshot of code](images/image47.png)
+
+This @csrf token is created by Laravel and is used to prevent CSRF attacks. It is not something that I can modify.
 
 ---
 
 ### Events Page with Admin Panel
 
-
+Passed with no errors on the first try.
+![Screenshot of test results](images/image48.png)
 
 ---
 
 ### Contact Page
 
+One error:
+![Screenshot of test results](images/image49.png)
 
+The error was fixed by removing type="text" from the textarea tag.
+
+There was also the same @csrf token error as on the login page. This is not something that I can change.
+
+New test results:
+![Screenshot of new test results](images/image50.png)
 
 ---
 
 ### View Event Page
 
+One repeated error:
+![Screenshot of test results](images/image51.png)
 
+This is due to there being a button inside an 'a' tag. 
+
+This was solved by just removing the 'a' tag as it didn't actually do anything.
+
+New test results:
+![Screenshot of new test results](images/image52.png)
+
+No errors now.
+
+---
+
+### Evaluation
+
+All pages now pass the W3C HTML Validator with no errors. There were only a few errors that needed to be fixed, and anything that did need to be fixed was very easy to do.
 
 ---

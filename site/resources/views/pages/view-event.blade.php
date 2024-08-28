@@ -30,10 +30,8 @@
             {{-- Loop through the images in column two --}}
             @foreach($columnTwo as $image)
                 <div>
-                    <a>
                         {{-- Display the image modal --}}
                         {{ view('components.image-modal', ['image' => $image, 'folder' => $eventFolder]) }}
-                    </a>
                 </div>
             @endforeach
         </div>
@@ -41,10 +39,8 @@
             {{-- Loop through the images in column three --}}
             @foreach($columnThree as $image)
                 <div>
-                    <a>
                         {{-- Display the image modal --}}
                         {{ view('components.image-modal', ['image' => $image, 'folder' => $eventFolder]) }}
-                    </a>
                 </div>
             @endforeach
         </div>

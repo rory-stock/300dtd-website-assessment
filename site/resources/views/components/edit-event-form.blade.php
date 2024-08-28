@@ -42,7 +42,7 @@
         {{-- Go through each image and display it as a radio button --}}
         @foreach($images as $image)
             <label class="flex items-center gap-2 p-5 space-x-3 bg-white border rounded-md shadow-sm hover:bg-gray-50 border-neutral-200/70">
-                <input type="radio" id="cover" name="coverImage" value="{{ $image->id }}" class="text-gray-900 translate-y-px focus:ring-gray-700" />
+                <input type="radio" id="cover" name="coverImage" value="{{ $image->id }}" class="text-gray-900 translate-y-px focus:ring-gray-700">
                 <span class="relative flex flex-col text-left space-y-1.5 leading-none">
                     <img src="{{ $image->display_image_path }}" alt="" class="w-auto max-h-20 object-cover rounded-md">
                 </span>

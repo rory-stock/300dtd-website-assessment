@@ -23,7 +23,7 @@
                 {{-- Display the cover image if present --}}
                 @if ($event->cover_image_path)
                     <div class="relative">
-                        <img src="{{ $event->cover_image_path }}" class="w-full h-auto" alt=""/>
+                        <img src="{{ $event->cover_image_path }}" class="w-full h-auto" alt="">
                     </div>
                 @endif
                 {{-- Display the event details --}}
