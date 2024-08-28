@@ -19,6 +19,8 @@ Assessment Standards: **91902** and **91903**
 
 ## Using the live website
 
+Go to [rorystock.com](https://www.rorystock.com) to view the live website.
+
 To access the admin page click on the button in the bottom right of the footer. This will take you to the login page. The default login details are:
 
     Email: admin@rorystock.com
