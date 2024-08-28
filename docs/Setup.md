@@ -25,7 +25,7 @@ First the project environment will need to be configured. Copy '.env.example' an
 
 Required environment variables are:
 
-    APP_KEY=base64:36erk0bAGtrwC8Zi8lVxpS2YFjczyOV61e4NJEFpI14=
+    APP_KEY=
 
     RESEND_API_KEY=re_94mbww6r_6PdHpNnfRaUyEJRekfMZ82Bk
     MAIL_FROM_ADDRESS=rorystock06@gmail.com
@@ -46,9 +46,21 @@ Required environment variables are:
 
 ### Running the Project
 
-First PHP will need to be installed on the computer.
+First PHP and Composer will need to be installed on the computer.
 
 Next open a new terminal window in the project directory (easiest in a code editor) and run the following commands:
+
+Install the project dependencies:
+
+    composer install
+
+Create an application key:
+
+    php artisan key:generate
+
+Then place the application key in the .env file:
+
+    APP_KEY=base64:your_key_here
 
 To make sure the database is setup correctly run:
 
@@ -92,8 +104,9 @@ As images have to be in an event folder in the cloudflare r2 bucket to show on t
 
 List:
     
+    2024-07-10 - Gravity Enduro Camp
+    2024-08-06 - Cable Bay Dig Crew - 1
     2024-08-10 - Sam Gale Coaching
-    
 
 ---
 
