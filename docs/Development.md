@@ -313,3 +313,35 @@ Screenshot of the live site:
 > Users happy with the live site. Site was fully looked over in the final user feedback so no changes needed here.
 
 ---
+
+## Testing Log
+
+### Home Page
+
+
+
+---
+
+### Events Page
+
+
+
+---
+
+### Events Page with Admin Panel
+
+
+
+---
+
+### Contact Page
+
+
+
+---
+
+### View Event Page
+
+
+
+---
