@@ -316,7 +316,7 @@ Screenshot of the live site:
 
 ## Testing Log
 
-Testing is done using the W3C HTML Validator. Because the site uses HTMX and Alpine.js the validator will show errors for these. But they can be ignored as they are not actually errors.
+Testing is done using the W3C HTML Validator and Google Lighthouse. Because the site uses HTMX and Alpine.js the validator will show errors for these. But they can be ignored as they are not actually errors.
 
 ### Home Page
 
@@ -383,8 +383,17 @@ No errors now.
 
 ---
 
+### Lighthouse Testing
+
+Testing with Google Lighthouse gave the following results:
+![Screenshot of test results](images/image53.png)
+
+This is a pretty good score and doesn't really need any changes.
+
+---
+
 ### Evaluation
 
-All pages now pass the W3C HTML Validator with no errors. There were only a few errors that needed to be fixed, and anything that did need to be fixed was very easy to do.
+All pages now pass the W3C HTML Validator with no errors. There were only a few errors that needed to be fixed, and anything that did need to be fixed was very easy to do. The Google Lighthouse score is also good and doesn't need any changes.
 
 ---
