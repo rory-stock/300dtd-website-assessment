@@ -27,69 +27,69 @@ As Laravel creates a lot of files itself when you make a new project, many of th
 
 ### Controllers (/app/Http/Controllers):
 
-- AdminController.php
-- EventController.php
-- ImageController.php
-- MailController.php
-- RouteController.php
+    AdminController.php
+    EventController.php
+    ImageController.php
+    MailController.php
+    RouteController.php
 
 ### Components (/app/View/Components):
 
-- editEventForm.php
+    editEventForm.php
 
 ### Config (/config):
 
-- admin.php
-- filesystems.php
+    admin.php
+    filesystems.php
 
 ### Database (/database/migrations):
 
-- 0001_01_01_000000_create_users_table.php
-- 2024_08_22_001019_create_events_table.php
+    0001_01_01_000000_create_users_table.php
+    2024_08_22_001019_create_events_table.php
 
 ### CSS (/resources/css):
 
-- app.css
+    app.css
 
 ### Views (/resources/views):
 
-- auth/login.blade.php
-<br><br>
-- components/admin-content.blade.php
-- components/contact-form.blade.php
-- components/edit-event-form.blade.php
-- components/image-modal.blade.php
-- components/modal.blade.php
-- components/new-event-form.blade.php
-- components/slide-over.blade.php
-<br><br>
-- includes/footer.blade.php
-- includes/head.blade.php
-- includes/header.blade.php
-- includes/nav.blade.php
-<br><br>
-- layouts/default.blade.php
-<br><br>
-- pages/contact.blade.php
-- pages/events.blade.php
-- pages/home.blade.php
-- pages/view-event.blade.php
+    auth/login.blade.php
+
+    components/admin-content.blade.php
+    components/contact-form.blade.php
+    components/edit-event-form.blade.php
+    components/image-modal.blade.php
+    components/modal.blade.php
+    components/new-event-form.blade.php
+    components/slide-over.blade.php
+
+    includes/footer.blade.php
+    includes/head.blade.php
+    includes/header.blade.php
+    includes/nav.blade.php
+
+    layouts/default.blade.php
+
+    pages/contact.blade.php
+    pages/events.blade.php
+    pages/home.blade.php
+    pages/view-event.blade.php
 
 ### Routes (/routes):
 
-- web.php
+    web.php
 
 ### Storage (/storage/app/public):
 
-- /icons/*
-- /images/homeImages/cover/*
-- /images/homeImages/main/*
+    /icons/*
+    /images/homeImages/cover/*
+    /images/homeImages/main/*
 
 ### Environment File (/):
 
-- .env
-- .env.example
+    .env
+    .env.example
 
 ### Other (/):
 
-- tailwind.config.js
+    tailwind.config.js
