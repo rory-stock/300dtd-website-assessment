@@ -17,11 +17,43 @@ Assessment Standards: **91902** and **91903**
 
 -------------------------------------------------
 
-## Project Setup Instructions
+## Using the live website
 
-### .env Configuration
+To access the admin page click on the button in the bottom right of the footer. This will take you to the login page. The default login details are:
 
-First the project environment will need to be configured. Copy '.env.example' and rename to '.env'.
+    Email: admin@rorystock.com
+
+    Password: adminadmin
+
+Once logged in you will be redirected to the event page. There will now be a button in the top left of the page. When clicked the admin panel will come up. From here you can add new events and images to the website as well as edit and delete existing ones.
+
+As images have to be in an event folder in the cloudflare r2 bucket to show on the website I have given a list of events that are already in the bucket. To add images to the website you will place the name of the folder in the event folder field when adding a new event.
+
+List:
+    
+    2024-07-10 - Gravity Enduro Camp
+    2024-08-06 - Cable Bay Dig Crew - 1
+    2024-08-10 - Sam Gale Coaching
+
+---
+
+## Localhost Setup
+
+If you want to run the project locally, you will need to have follow the steps below.
+
+First PHP, NPM and Composer will need to be installed on the computer.
+
+Next open a new terminal window in the project directory (easiest in a code editor) and run the following commands:
+
+#### Install the project dependencies:
+
+    composer install
+
+#### Install the node dependencies:
+
+    npm install
+
+#### Configure the project environment by copying '.env.example' and renaming it to '.env'.
 
 Required environment variables are:
 
@@ -42,39 +74,27 @@ Required environment variables are:
 
 <strong>Note:</strong> The names of the environment variable are already in the env.example file. The values would just need to be filled in.
 
----
-
-### Running the Project
-
-First PHP and Composer will need to be installed on the computer.
-
-Next open a new terminal window in the project directory (easiest in a code editor) and run the following commands:
-
-Install the project dependencies:
-
-    composer install
-
-Create an application key:
+#### Create an application key:
 
     php artisan key:generate
 
-Then place the application key in the .env file:
+#### Then place the application key in the .env file:
 
     APP_KEY=base64:your_key_here
 
-To make sure the database is setup correctly run:
+#### To make sure the database is setup correctly run:
 
     php artisan migrate
 
-Next run:
+#### Next run:
 
     npm run dev
 
-In a second terminal tab run the following command:
+#### In a second terminal tab run the following command:
 
     php artisan serve
 
-This will create a localhost link that can be opened in a web browser.
+#### This will create a localhost link that can be opened in a web browser.
 
 ---
 
@@ -87,26 +107,6 @@ To clear and remake the database run:
 If no images are showing on the home page of the website run
     
     php artisan storage:link
-
----
-
-### Using the website
-
-To access the admin page click on the button in the bottom right of the footer. This will take you to the login page. The default login details are:
-
-    Email: admin@rorystock.com
-
-    Password: adminadmin
-
-Once logged in you will be redirected to the event page. There will now be a button in the top left of the page. When clicked the admin panel will come up. From here you can add new events and images to the website as well as edit and delete existing ones.
-
-As images have to be in an event folder in the cloudflare r2 bucket to show on the website I have given a list of events that are already in the bucket. To add images to the website you will place the name of the folder in the event folder field when adding a new event.
-
-List:
-    
-    2024-07-10 - Gravity Enduro Camp
-    2024-08-06 - Cable Bay Dig Crew - 1
-    2024-08-10 - Sam Gale Coaching
 
 ---
 
