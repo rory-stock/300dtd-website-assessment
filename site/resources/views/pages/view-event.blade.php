@@ -14,6 +14,7 @@
     </div>
     <p class="flex justify-center text-lg pl-4 pt-4 pb-4 text-neutral-500">Click on an image to download it</p>
 
+
     {{-- Display the event images --}}
     <div class="sm:grid grid-cols-3 gap-4 pl-4 pr-4 pb-4 hidden">
         <div class="gap-4 flex flex-col">
