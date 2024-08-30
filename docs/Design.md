@@ -146,10 +146,12 @@ This means that I should use common design elements and layouts that users are a
 
 ### Database Structure
 
+Final Database Structure:
 ![Database Structure](images/finalDatabaseStructure.png)
 
 ### User Interface Design
 
+Final User Interface Design:
 ![User Interface Design](images/finalUserInterfaceDesign.png)
 
 -------------------------------------------------
@@ -158,10 +160,13 @@ This means that I should use common design elements and layouts that users are a
 
 ### Database Structure
 
+Completed Database Structure:
 ![Database Structure](images/completedDatabaseStructure.png)
 <strong>Note:</strong> Only the 'events' table and 'event_images' table are created by me. The rest are created by Laravel when setting up the project. I have modified the 'users' table though.
 
 ### User Interface Design
+
+Completed User Interface Design:<br>
 
 Home Page:
 ![User Interface Design](images/completedUserInterfaceDesign.png)<br><br>

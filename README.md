@@ -21,6 +21,23 @@ The documentation for this project is split into the following sections:
 
 ---
 
+## Project Overview
+
+This project is a photography portfolio website that allows:
+
+Admins to:
+- Add, edit, and delete events
+
+Users to:
+- View a selection of portfolio images
+- View events
+- Download images from an event
+- Contact the site owner
+
+It is built using the Laravel PHP framework and uses a SQLite database. It uses TailwindCSS for styling and HTMX and Alpine.js for interactivity.
+
+---
+
 ## Files Worked On
 
 As Laravel creates a lot of files itself when you make a new project, many of the files are ones that I have not worked on. The files that I have worked on are:
