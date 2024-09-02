@@ -107,8 +107,4 @@ As Laravel creates a lot of files itself when you make a new project, many of th
     .env
     .env.example
 
-### Other (/):
-
-    tailwind.config.js
-
 ---
