@@ -61,14 +61,14 @@ Required environment variables are:
 
     APP_KEY=
 
-    RESEND_API_KEY=re_94mbww6r_6PdHpNnfRaUyEJRekfMZ82Bk
+    RESEND_API_KEY=find_in_attached_apiKey_file
     MAIL_FROM_ADDRESS=rorystock06@gmail.com
 
-    CLOUDFLARE_R2_ACCESS_KEY_ID=a5912dfa2d202d5bfe6bc065f487a01f
-    CLOUDFLARE_R2_SECRET_ACCESS_KEY=03a04fd2b301b60c08dfb78610457c2c2c8a880686738d03b3fbaaad1e4df9b9
-    CLOUDFLARE_R2_BUCKET=rorystock-photostorage
-    CLOUDFLARE_R2_ENDPOINT=https://2b099d945447f7175ff8eddeaa4556f5.r2.cloudflarestorage.com
-    CLOUDFLARE_R2_URL=
+    CLOUDFLARE_R2_ACCESS_KEY_ID=find_in_attached_apiKey_file
+    CLOUDFLARE_R2_SECRET_ACCESS_KEY=find_in_attached_apiKey_file
+    CLOUDFLARE_R2_BUCKET=find_in_attached_apiKey_file
+    CLOUDFLARE_R2_ENDPOINT=find_in_attached_apiKey_file
+    CLOUDFLARE_R2_URL=this_should_be_empty
 
     ADMIN_EMAIL=admin@rorystock.com
     ADMIN_PASSWORD=adminadmin
